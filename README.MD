@@ -39,6 +39,7 @@ via https://github.com/AI-for-Business/Vorlesung-Generative-KI*
 
 
 # DOI - Code
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13379952.svg)](https://doi.org/10.5281/zenodo.13379952)
 
 
 # Contact / About us
