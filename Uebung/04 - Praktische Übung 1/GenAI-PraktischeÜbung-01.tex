@@ -1,0 +1,120 @@
+%{
+% \documentclass[12pt,ngerman]{/Users/dominik-cau/Documents/Lernen/Uni/Promotion/Vorlagen/Bayreuth/Exercise/AssignmentClass}
+\documentclass[12pt,ngerman]{AssignmentClass}
+% \documentclass{article}
+%\documentclass[12pt, english]{AssignmentClass}
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% Template-specific packages
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{wasysym} % for flash-symbol
+\usepackage{graphicx} % Required for including images
+\usepackage{amsmath}
+\usepackage{listings} % Required for insertion of code
+\usepackage{siunitx}
+\usepackage{pnets}
+\usepackage[most]{tcolorbox} % Grey Deadline Bar
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+% Initialize comment sections
+\usetheme{light-theme}
+\excludecomment{dark-theme}
+\excludecomment{solution}
+\hypersetup{urlcolor=cyan, colorlinks=true}
+\usepackage{tabularx}
+%----------------------------------------------------------------------------------------
+%	SET VERSION
+%----------------------------------------------------------------------------------------
+%\includecomment{dark-theme}
+\includecomment{solution}
+
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+%\setlanguageEnglish
+%\setlanguageGerman
+% \begin{dark-theme}
+% 	\usetheme{dark-theme}
+% 	\excludecomment{light-theme}
+% \end{dark-theme}
+\title{Praktische Übung 1} % Assignment title
+\instructor{Kaan Apaydin}
+\class{Generative Künstliche Intelligenz} % Course or class name
+\term{Sommersemester 2024}
+% \topics{Begriffe $\bullet$ Kontrollflussmuster $\bullet$ Organisationseinheiten}
+\topics{10.06.2024}
+%----------------------------------------------------------------------------------------
+%}
+
+\begin{document}
+	\maketitle
+
+    % Header Deadline Bar
+    %{
+    \noindent % Ensures the box spans the entire width
+    \begin{tcolorbox}[colback=gray!20, % Background color as light gray
+                      colframe=gray!20, % Frame color same as background
+                      boxrule=0pt, % No border
+                      sharp corners, % Sharp corners
+                      valign=center, % Vertically centered text
+                      halign=center, % Horizontally centered text
+                      height=2cm] % Height of the box
+    \LARGE \bfseries Abgabe: 23.06.2024 % Bold text
+    \end{tcolorbox}
+    %}
+
+    
+    \section{Lokale Large Language Models}
+        LLMs werden auf großen öffentlich verfügbaren Datensätzen trainiert und auch mit unserer Hilfe verbessert. Bei der Nutzung von LLMs von kommerziellen Anbietern werden die Prompts übermittelt zwischengespeichert und verarbeitet. Es ist daher nicht empfehlenswert private oder unternehmensinterne Informationen mit kommerziellen Anbietern zu teilen.
+Um die Privatsphäre bei der Nutzung von LLMs zu gewährleisten, können lokale LLMs installiert und genutzt werden. Diese Aufgabe beschäftigt sich mit der Installation, der Nutzung und den Fähigkeiten von lokalen Sprachmodellen, die sich in ihrer Größe und Eignung unterscheiden. 
+
+        
+\begin{enumerate}[a)]
+
+\item Installiere \href{https://ollama.com/download}{Ollama}
+
+\item Vergleiche die verfügbaren Modelle und fülle die nachfolgende Tabelle für fünf Modelle deiner Wahl aus: 
+
+
+\begin{table}[h!]
+    \centering
+    \begin{tabularx}{\textwidth}{X|X|X|X|X|X}
+       Modell-name & Trainierende Organisation & Größe (Speicher) & Anzahl der Parameter & Verwendete Trainings-datensätze & Empfohlene Anwendungs-bereiche\\ \hline 
+         &  &  &  &  & \\ \hline 
+         &  &  &  &  & \\ \hline 
+         &  &  &  &  & \\ \hline 
+         &  &  &  &  & \\ 
+    \end{tabularx}
+    \caption{Ollama Modelle - Übersicht}
+    \label{tab:my_label}
+\end{table}
+
+
+\item  Installiere und starte ein lokales LLM. Rufe dafür die Konsole auf und gebe diese beiden Befehle ein: 
+\begin{enumerate}[i)] 
+\item ollama pull \textit{modelname} 
+\item ollama run \textit{modelname}
+\end{enumerate} 
+\item Führe einen Dialog (ca. 4-5 Prompts) mit dem lokal installierten LLM über ein Thema deiner Wahl. Stelle dem lokal installierten LLM eine Frage und gehe anschließend auf die Antworten des LLMs ein. Mache Screenshots vom Dialog.
+
+\item Bewerte die Qualität der Antworten. Bewerte außerdem, ob das lokal installierte LLM den Kontext und den Gesprächsverlauf richtig erfasst. Falls möglich, nenne Gründe, die sich möglicherweise auf die Qualität und das „Erinnerungsvermögen“ des lokalen LLMs auswirken. Dokumentiere deine Bewertung und die potenziellen Gründe auf ca. einer halben Seite. 
+
+\item (Optional) Erstelle eine eigene \href{https://github.com/ollama/ollama/blob/main/docs/modelfile.md}{model file} und verleihe damit der generativen KI eine neue Persönlichkeit. Lade das LLM mit der Modelfile und teste, ob die Persönlichkeit übernommen wurde. 
+\end{enumerate}
+
+\textbf{Abgaben}
+\begin{enumerate}[a)]
+\item Die ausgefüllte Tabelle aus Schritt $b$: 
+											
+\item Screenshots von dem Dialog mit dem lokalen LLM aus Schritt $d$:
+
+\item Dokumentation der Bewertung aus Schritt $e$ (ca. ½ Seite):
+
+\item (Optional) Code aus der \textit{model file} aus Schritt $f$ und Screenshots vom Test:
+\end{enumerate}
+\end{document}

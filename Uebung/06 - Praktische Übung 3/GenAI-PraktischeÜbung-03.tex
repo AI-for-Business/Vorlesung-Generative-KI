@@ -1,0 +1,107 @@
+%{
+% \documentclass[12pt,ngerman]{/Users/dominik-cau/Documents/Lernen/Uni/Promotion/Vorlagen/Bayreuth/Exercise/AssignmentClass}
+\documentclass[12pt,ngerman]{AssignmentClass}
+% \documentclass{article}
+%\documentclass[12pt, english]{AssignmentClass}
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% Template-specific packages
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{wasysym} % for flash-symbol
+\usepackage{graphicx} % Required for including images
+\usepackage{amsmath}
+\usepackage{listings} % Required for insertion of code
+\usepackage{siunitx}
+\usepackage{pnets}
+\usepackage[most]{tcolorbox} % Grey Deadline Bar
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+% Initialize comment sections
+\usetheme{light-theme}
+\excludecomment{dark-theme}
+\excludecomment{solution}
+\hypersetup{urlcolor=cyan, colorlinks=true}
+\usepackage{tabularx}
+%----------------------------------------------------------------------------------------
+%	SET VERSION
+%----------------------------------------------------------------------------------------
+%\includecomment{dark-theme}
+\includecomment{solution}
+
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+%\setlanguageEnglish
+%\setlanguageGerman
+% \begin{dark-theme}
+% 	\usetheme{dark-theme}
+% 	\excludecomment{light-theme}
+% \end{dark-theme}
+\title{Praktische Übung 3} % Assignment title
+\instructor{Kaan Apaydin
+
+Kontakt für Fragen und Abgaben kaan.apaydin@uni-bayreuth.de}
+\class{Generative Künstliche Intelligenz} % Course or class name
+\term{Sommersemester 2024}
+% \topics{Begriffe $\bullet$ Kontrollflussmuster $\bullet$ Organisationseinheiten}
+\topics{08.07.2024}
+%----------------------------------------------------------------------------------------
+%}
+
+\begin{document}
+	\maketitle
+
+    % Header Deadline Bar
+    %{
+    \noindent % Ensures the box spans the entire width
+    \begin{tcolorbox}[colback=gray!20, % Background color as light gray
+                      colframe=gray!20, % Frame color same as background
+                      boxrule=0pt, % No border
+                      sharp corners, % Sharp corners
+                      valign=center, % Vertically centered text
+                      halign=center, % Horizontally centered text
+                      height=2cm] % Height of the box
+    \LARGE \bfseries Abgabe: 21.07.2024 % Bold text
+    \end{tcolorbox}
+    %}
+
+    
+\section{Klassifikation von Informationen}
+    
+Für Begeisterte von generativer KI gibt es vielfältige Möglichkeiten eigene Projekte zu realisieren. LLMs könnten zum Beispiel zur automatisierten Klassifikation von Informationen eingesetzt werden. 
+In der folgenden Aufgabe sollen Emails klassifiziert werden, um einer Kategorie zugeordnet zu werden und anschließend eine Antwort vorzuformulieren. 
+
+        
+\begin{enumerate}
+\item Öffne das \href{https://colab.research.google.com/drive/1UCRWkXX_R3sopfzp_KzXBdkdrzukWwzE\#scrollTo=_x418HsXt1q-}{Python Notebook auf Google Colab} 
+\item Erstelle eine einfache Skizze, die den Ablauf der Anwendung inklusive der Ein- und Ausgaben der Komponenten zeigt.
+\item Analysiere den Code und beantworte die folgenden Fragen mit einer kurzen Erläuterung:
+\begin{enumerate}
+    \item Erzielt die Anwendung gute Ergebnisse entsprechend dem Anwendungsfall?
+    \item Was passiert, wenn Sie die Reihenfolge der Ketten in der SequentialChain geändert werden?
+    \item Welche Prompting-Techniken werden eingesetzt? 
+\end{enumerate}
+\item  Erstelle ein viertes Beispiel (z.B. mit ChatGPT) für einen Typ, der im Prompt nicht definiert wurde. Was passiert, wenn der Typ der E-Mail nicht in die definierten Kategorien fällt?
+\item  Nehme die folgenden Änderungen am Code vor:
+\begin{enumerate}
+    \item Ändere die *classification\_prompt*, um unbekannte E-Mail-Typen explizit zu behandeln.
+    \item Fügen der *classification\_prompt* eine weitere E-Mail-Kategorie hinzu, die ebenfalls über die *email\_answer\_chain* beantwortet werden soll.
+    \item Fügen eine weitere Kette hinzu, die aus der Zusammenfassung eine aussagekräftige Überschrift mit bis zu 10 Wörtern erzeugt.
+\end{enumerate}
+\item (Optional) Werde kreativ und erstelle eine eigene SequentialChain mit mindestens 3 Kettengliedern.
+\end{enumerate}
+
+\textbf{Abgaben}
+\begin{enumerate}[a)]
+\item Skizze aus $Schritt\ 2$ 								
+\item Erläuterungen zu den Aufgaben in $Schritt\ 3$
+\item Dokumentation des vierten Beispiels und Beobachtung in $Schritt\ 4$
+\item  Dokumentation der Änderungen in $Schritt\ 5$
+\item (Optional) Dokumentation der eigenen SequentialChain aus $Schritt\ 6$
+\end{enumerate}
+\end{document}

@@ -1,0 +1,126 @@
+%{
+% \documentclass[12pt,ngerman]{/Users/dominik-cau/Documents/Lernen/Uni/Promotion/Vorlagen/Bayreuth/Exercise/AssignmentClass}
+\documentclass[12pt,ngerman]{AssignmentClass}
+% \documentclass{article}
+%\documentclass[12pt, english]{AssignmentClass}
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% Template-specific packages
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{wasysym} % for flash-symbol
+\usepackage{graphicx} % Required for including images
+\usepackage{amsmath}
+\usepackage{listings} % Required for insertion of code
+\usepackage{siunitx}
+\usepackage{pnets}
+\usepackage[most]{tcolorbox} % Grey Deadline Bar
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+% Initialize comment sections
+\usetheme{light-theme}
+\excludecomment{dark-theme}
+\excludecomment{solution}
+
+
+%----------------------------------------------------------------------------------------
+%	SET VERSION
+%----------------------------------------------------------------------------------------
+%\includecomment{dark-theme}
+\includecomment{solution}
+
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+%\setlanguageEnglish
+%\setlanguageGerman
+% \begin{dark-theme}
+% 	\usetheme{dark-theme}
+% 	\excludecomment{light-theme}
+% \end{dark-theme}
+\title{Übung 1} % Assignment title
+\instructor{Yorck Zisgen}
+\class{Generative Künstliche Intelligenz} % Course or class name
+\term{Sommersemester 2024}
+% \topics{Begriffe $\bullet$ Kontrollflussmuster $\bullet$ Organisationseinheiten}
+\topics{23.04.2024}
+%----------------------------------------------------------------------------------------
+%}
+
+\begin{document}
+	\maketitle
+
+    % Header Deadline Bar
+    %{
+    \noindent % Ensures the box spans the entire width
+    \begin{tcolorbox}[colback=gray!20, % Background color as light gray
+                      colframe=gray!20, % Frame color same as background
+                      boxrule=0pt, % No border
+                      sharp corners, % Sharp corners
+                      valign=center, % Vertically centered text
+                      halign=center, % Horizontally centered text
+                      height=2cm] % Height of the box
+    \LARGE \bfseries Abgabe: 06.05.2024 % Bold text
+    \end{tcolorbox}
+    %}
+
+    
+    \section{Modellierung vs. Machine Learning}
+        Erklären Sie den Unterschied zwischen klassischer Modellierung und Machine Learning Ansätzen. Geben Sie jeweils ein Beispiel.
+        
+        % \textit{Die Lösung hierzu würde man auf Satz 1, Folie 18 finden.}
+
+
+    
+    
+    \section{Grenzen von LLMs}
+        
+        \begin{enumerate}[a)]
+        \item Diskutieren Sie die aktuellen Grenzen von LLMs. Welche Möglichkeiten sehen Sie, diese zu beheben?
+        
+        % \textit{Die Lösung hierzu würde man auf Satz 1, Folie 27 finden.}
+
+        % \item Spielen Sie mit den Grenzen von ChatGPT, beispielsweise Wörter invertieren, Galgenraten, 4 Gewinnt, TicTacToe. Was ist Ihre Erkenntnis?
+        \item Testen Sie folgendes mit ChatGPT: Wörter invertieren, Galgenraten, 4 Gewinnt, TicTacToe spielen. Fassen Sie kurz die Ergebnisse Ihrer Evaluation zusammen.
+        \end{enumerate}
+
+
+    
+    
+    \section{Praktische Anwendung}
+        % \textit{Hier gibt es kein richtig und kein falsch, es geht ums 'selbst erleben'.}
+    
+        \begin{enumerate}[a)]
+    		\item Lassen Sie von ChatGPT eine Modulbeschreibung zu einer Vorlesung schreiben, die „Einführung in die Generative KI“ heißt. Die Vorlesung ist für Masterstudierende der Wirtschaftswissenschaften gedacht.
+    		\item Lassen Sie sich eine Übungsaufgabe zu der Vorlesung erstellen.
+    		\item Erstellen Sie 5 Quizaufgaben zu der Vorlesung.
+            \item Suchen Sie nach einem Beispiel, bei dem ChatGPT halluziniert.
+    	\end{enumerate}
+
+    
+    \newpage
+    
+    \section{Kombinierte Anwendung}
+        % \textit{Hier gibt es kein richtig und kein falsch, es geht ums 'selbst erleben'.}\\
+    
+        Generative KI kann nicht nur Texte erstellen.
+        
+        \begin{enumerate}[a)]
+            \item Wählen sie ein Aufgabengebiet (Text-to-X oder X-to-Text). Recherchieren sie hierzu drei mögliche Produkte. Ermitteln Sie, ob sich manche davon kostenlos nutzen lassen.
+            % \item Denken Sie sich ein Produkt aus. Lassen Sie sich eine Produktbeschreibung generieren. Lassen Sie sich ein Bild generieren. Erzeugen sie eine Homepage, auf der Produktname, -Bild und -Beschreibung dargestellt werden.
+            \item Denken Sie sich ein Produkt aus und erzeugen Sie zu diesem Produkt eine Produktbeschreibung und ein fiktives Bild.
+
+            \item Erzeugen sie eine Homepage, auf der Produktname, -Bild und -Beschreibung dargestellt werden. [\textit{Hinweis: ChatGPT-3.5 kann keine Bilder erzeugen. Sie können ChatGPT-4.0 verwenden wenn Sie Zugriff darauf haben, eine Alternative wie bspw. https://deepai.org benutzen oder etwas anderes wie einen Werbetext oder ein Video erzeugen.}]
+        \end{enumerate}
+
+        % \textit{Die Studierenden sollen sich mit unterschiedlichen Modi der GenAI auseinander setzen und "damit rumspielen". Eventuell ist da auch etwas bei, was sie weiterhin für das eigene Studium verwenden können?}
+
+        % ** Anmerkung: [mit ChatGPT 3.5 wird das Erzeugen einer Seite mit diesen Inhalten schwierig. Vielleicht Aufgabe weglassen oder was anderes machen lassen] Erzeugen sie eine Homepage, auf der Produktname, -Bild und -Beschreibung dargestellt werden.
+
+    
+\end{document}
+

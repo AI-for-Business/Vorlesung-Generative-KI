@@ -1,0 +1,109 @@
+%{
+% \documentclass[12pt,ngerman]{/Users/dominik-cau/Documents/Lernen/Uni/Promotion/Vorlagen/Bayreuth/Exercise/AssignmentClass}
+\documentclass[12pt,ngerman]{AssignmentClass}
+% \documentclass{article}
+%\documentclass[12pt, english]{AssignmentClass}
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% Template-specific packages
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{wasysym} % for flash-symbol
+\usepackage{graphicx} % Required for including images
+\usepackage{amsmath}
+\usepackage{listings} % Required for insertion of code
+\usepackage{siunitx}
+\usepackage{pnets}
+\usepackage[most]{tcolorbox} % Grey Deadline Bar
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+% Initialize comment sections
+\usetheme{light-theme}
+\excludecomment{dark-theme}
+\excludecomment{solution}
+
+
+%----------------------------------------------------------------------------------------
+%	SET VERSION
+%----------------------------------------------------------------------------------------
+%\includecomment{dark-theme}
+\includecomment{solution}
+
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+%\setlanguageEnglish
+%\setlanguageGerman
+% \begin{dark-theme}
+% 	\usetheme{dark-theme}
+% 	\excludecomment{light-theme}
+% \end{dark-theme}
+\title{Übung 2} % Assignment title
+\instructor{Yorck Zisgen}
+\class{Generative Künstliche Intelligenz} % Course or class name
+\term{Sommersemester 2024}
+% \topics{Begriffe $\bullet$ Kontrollflussmuster $\bullet$ Organisationseinheiten}
+\topics{07.05.2024}
+%----------------------------------------------------------------------------------------
+%}
+
+\begin{document}
+	\maketitle
+
+    % Header Deadline Bar
+    %{
+    \noindent % Ensures the box spans the entire width
+    \begin{tcolorbox}[colback=gray!20, % Background color as light gray
+                      colframe=gray!20, % Frame color same as background
+                      boxrule=0pt, % No border
+                      sharp corners, % Sharp corners
+                      valign=center, % Vertically centered text
+                      halign=center, % Horizontally centered text
+                      height=2cm] % Height of the box
+    \LARGE \bfseries Abgabe: 27.05.2024 % Bold text
+    \end{tcolorbox}
+    %}
+
+
+    \section{Prompting Strategien 1}
+        % Aufgabe zu Zero-Shot / One-Shot / Few-Shot / Chained Prompting
+        \begin{enumerate}[a)]
+            \item Geben Sie ein Beispiel für \textbf{Zero-Shot} Prompting. Für welche Anwendungsfälle eignet sich diese Strategie?
+            \item Geben Sie ein Beispiel für \textbf{One-Shot} Prompting. Was ist der Vorteil gegenüber dem Zero-Shot Prompting?
+            \item Nutzen Sie \textbf{Few-Shot} Prompting, um einen Urlaub zu planen.
+            \item Ihr Team soll um eine technische Mitarbeiterstelle erweitert werden. Verwenden Sie \textbf{Chained Prompting}, um die Bewerbung zu lesen und zu evaluieren. Listen Sie alle Prompts auf, mit denen Sie zu einer Einstellungs- oder Ablehnungsentscheidung gelangt sind.
+        \end{enumerate}
+
+
+    \section{Prompting Strategien 2}
+        Erklären Sie den Unterschied zwischen \textit{Iterative Prompting} und \textit{Chained Prompting}.\\
+        Wann würden Sie welche Strategie verwenden?
+
+
+    \section{LLM-Techniken}
+        Erklären sie die Aufgabe und die Funktionsweise der folgenden Techniken:
+        \begin{enumerate}[a)]
+            \item Chunking
+            \item Embedding
+            \item Dense Retrieval
+        \end{enumerate}
+
+
+    \section{LLM-Anwendung mittels LangChain}
+        Sie möchten den Customer Support ihres Unternehmens durch den Einsatz eines ChatBots entlasten. Dieser wird auf der Unternehmenshomepage verfügbar sein und soll Kundenanfragen entgegennehmen und beantworten.
+        Modellieren Sie eine mehrgliedrige LangChain, um mögliche Benutzereingaben zu verarbeiten. Sie sollten mindestens in der Lage sein, Anfragen zu Rechnungen, Anfragen zu Lieferungen und Beschwerden zu erkennen und entsprechend zu verarbeiten.
+
+
+    \section{Reflexion und Diskussion}
+        Reflektieren Sie Ihre bisherigen Erfahrungen im Umgang mit Generativer KI.
+        \begin{enumerate}[a)]
+            \item Welche Limitationen von ChatGPT sind Ihnen bisher bei der Verwendung aufgefallen?
+            \item Wie wirken sich diese Limitationen auf Ihr Nutzungsverhalten aus?
+        \end{enumerate}
+
+
+\end{document}

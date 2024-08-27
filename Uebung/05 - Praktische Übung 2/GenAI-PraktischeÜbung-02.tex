@@ -1,0 +1,140 @@
+%{
+% \documentclass[12pt,ngerman]{/Users/dominik-cau/Documents/Lernen/Uni/Promotion/Vorlagen/Bayreuth/Exercise/AssignmentClass}
+\documentclass[12pt,ngerman]{AssignmentClass}
+% \documentclass{article}
+%\documentclass[12pt, english]{AssignmentClass}
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% Template-specific packages
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{wasysym} % for flash-symbol
+\usepackage{graphicx} % Required for including images
+\usepackage{amsmath}
+\usepackage{listings} % Required for insertion of code
+\usepackage{siunitx}
+\usepackage{pnets}
+\usepackage[most]{tcolorbox} % Grey Deadline Bar
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+% Initialize comment sections
+\usetheme{light-theme}
+\excludecomment{dark-theme}
+\excludecomment{solution}
+\hypersetup{urlcolor=cyan, colorlinks=true}
+\usepackage{tabularx}
+%----------------------------------------------------------------------------------------
+%	SET VERSION
+%----------------------------------------------------------------------------------------
+%\includecomment{dark-theme}
+\includecomment{solution}
+
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+%\setlanguageEnglish
+%\setlanguageGerman
+% \begin{dark-theme}
+% 	\usetheme{dark-theme}
+% 	\excludecomment{light-theme}
+% \end{dark-theme}
+\title{Praktische Übung 2} % Assignment title
+\instructor{Kaan Apaydin
+
+Kontakt für Fragen und Abgaben kaan.apaydin@uni-bayreuth.de}
+\class{Generative Künstliche Intelligenz} % Course or class name
+\term{Sommersemester 2024}
+% \topics{Begriffe $\bullet$ Kontrollflussmuster $\bullet$ Organisationseinheiten}
+\topics{24.06.2024}
+%----------------------------------------------------------------------------------------
+%}
+
+\begin{document}
+	\maketitle
+
+    % Header Deadline Bar
+    %{
+    \noindent % Ensures the box spans the entire width
+    \begin{tcolorbox}[colback=gray!20, % Background color as light gray
+                      colframe=gray!20, % Frame color same as background
+                      boxrule=0pt, % No border
+                      sharp corners, % Sharp corners
+                      valign=center, % Vertically centered text
+                      halign=center, % Horizontally centered text
+                      height=2cm] % Height of the box
+    \LARGE \bfseries Abgabe: 07.07.2024 % Bold text
+    \end{tcolorbox}
+    %}
+
+    
+\section{Large Language Model Erweiterungen – Komponenten als Bausatz-Sytem}
+    
+Ein Large Language Model, ein Prompt, eine Antwort. Mehrere aufeinanderfolgende Antworten mit „künstlichem Gedächtnis“, hochladen von mehreren Dateien, durchsuchen von mehreren Webseiten online. Generative KI besteht inzwischen aus mehreren Komponenten, um vielfältige Funktionalitäten anbieten zu können. Nachfolgend wird eine Übersicht über die verfügbaren Komponenten gegeben. Außerdem wird gezeigt, wie diese miteinander verknüpft werden müssen, um moderne Funktionalitäten generativer KI bereitzustellen. 
+        
+\begin{enumerate}[a)]
+
+\item Rufe im Webbrowser \href{https://www.langflow.org/}{Langflow} auf. 
+
+\item Klicke auf “Get Started” und melde dich an, um den online Editor nutzen zu können. Alternativ kann Langflow auch heruntergeladen und auf dem eigenen PC installiert werden.    
+
+\item Klicke auf “New Project” und wähle eine der Vorlagen aus. 
+
+\item Wichtig, bei jeder Vorlage muss die LLM Komponente angepasst oder ausgetauscht werden damit sie funktioniert. Dazu habt ihr mindestens diese drei Optionen: 
+\begin{enumerate}
+    \item Organisiere einen OpenAI API key (kostenpflichtig) und trage den key in die OpenAI LLM Komponente ein
+    \item Tausche die OpenAI LLM Komponente gegen die Ollama Komponente und stelle sicher das Ollama läuft. Prüfe hierzu, ob Ollama lokal erreichbar ist.  
+ \item Tausche die OpenAI LLM Komponente gegen die Cohere Komponente und organisiere einen Cohere API Key (kostenfrei) 
+
+\end{enumerate}
+\end{enumerate}
+
+\section{Basic Prompting und Chat Prompting}
+\begin{enumerate}
+    \item Folge den Schritten aus Aufgabe 1 und wähle die  Vorlage 
+$Basic  Prompting (Hello, World)$
+    \item Konfiguriere die LLM Komponente deiner Wahl
+    \item Prüfe ob das System richtig konfiguriert ist. Starte dazu den Playground und chatte mit dem LLM. (Da das System neu und in der Preview ist kann es vorkommen, dass es zu manchen Zeiten leider nicht funktioniert. Testet das System dann zu einem anderen Zeitpunkt noch einmal. Die nachfolgenden Aufgaben können sonst auch Vorab im theoretischen Teil bearbeitet werden.) 
+    \item Recherchiere wozu $System Prompts$ dienen, nutze das $Prompt Template$ und konfiguriere die $System Prompt$ so, dass sie eine andere Persönlichkeit wiederspiegelt. Dokumentiere die Antworten der neu eingestellten Persönlichkeit und beurteile wie gut diese wiedergegeben wird. 
+    \item Recherchiere was der Parameter \textit{Wärme} im Kontext generativer KI bedeutet, wie er funtioniert und in welchen Fällen die $Wärme$ höher bzw. niedriger eingestellt werden sollte. Nutze die Rechercheergebnisse, um den Parameter in der Praxis zu testen. Stelle dazu zum Beispiel zunächst die \textit{Wärme} auf 0 und frage die KI etwas. Stelle anschließend die \textit{Wärme} auf 2, starte die KI neu und frage die KI dieselbe Frage. Dokumentiere deine Recherche und beschreibe welche Auswirkungen die \textit{Wärme} auf die Antworten hatte.   
+    \item Chatte mit der KI und prüfe ob sie den Gesprächsverlauf erfasst. 
+    \item Füge einen $Chat Memory$ (im Ordner $Helpers$) Baustein hinzu und verknüpfe das Element mit dem $context$ input der $Prompt$ Komponente. Prüfe nun wieder ob das LLM den Gesprächsverlauf erfasst. Recherchiere wie das LLM zwischen den Eingaben des Nutzers oder der Nutzerin und seinen eigenen Antworten differenziert.   
+\end{enumerate}
+
+\section{Online and Offline Search and Summarization Agent}
+\begin{enumerate}
+    \item Folge den Schritten aus Aufgabe 1 und wähle die  Vorlage „Blog Writer“ 
+    \item Konfiguriere die LLM Komponente deiner Wahl
+    \item Prüfe ob das System richtig konfiguriert ist. Starte dazu den Playground und starte den Flow. 
+    \item Konfiguriere die Komponenten so, dass sie einen Nachrichtenartikel zusammenfassen: 
+    \begin{enumerate}
+        \item Ändere die URL, z.B. auf diesen \href{https://www.nytimes.com/interactive/2024/03/28/opinion/ai-political-bias.html?unlocked_article_code=1.g00.Ad4O.DBcJEwHGqnFM&smid=nytcore-ios-share&referringSource=articleShare}{NY Times Artikel}
+        \item Entferne die Zweite Variable aus dem Prompt.
+        \item Überarbeite die Instructions.
+    \end{enumerate}
+    \item Starte den Playground und starte den Flow. 
+    \item Konfiguriere die Komponenten so, dass sie den Inhalt einer PDF Datei zusammenfassen: 
+    \begin{enumerate}
+        \item Ersetze die Data URL Komponente mit der Data File Komponente
+        \item Lade eine kleine PDF Datei hoch die lizenzfrei ist. 
+    \end{enumerate}
+    \item Starte den Playground und starte den Flow. Mache anschließend einen Screenshot vom Flow für die Dokumentation der Aufgabe. 
+    \item Suche dir eine Komponente im Ordner "Utility" aus und beschreibe einen potenziellen Anwendungszweck. 
+    \item (Optional) Verschaffe dir einen weiteren Überblick über die verfügbaren Komponenten und sehe dir auch die anderen Vorlagen an. 
+    
+    
+    
+\end{enumerate}
+
+\textbf{Abgaben}
+\begin{enumerate}[a)]
+\item Dokumentiere die Antworten der neu eingestellten Persönlichkeit und beurteile wie gut diese wiedergegeben wird. ($Aufgabe 2.4$) 								
+\item Dokumentiere deine Recherche zum Parameter $Wärme$ und beschreibe welche Auswirkungen die $Wärme$ auf die Antworten hatte.  ($Aufgabe 2.5$)
+\item Recherchiere und dokumentiere wie LLMs zwischen den Eingaben des Nutzers oder der Nutzerin und seinen eigenen Antworten differenzieren  $Aufgabe 2.7$ 
+\item Screenshot vom $PDF Summarizer Flow$ aus $Aufgabe 3.7$
+\item Suche dir eine Komponente im Ordner $Utility$ aus und beschreibe einen potenziellen Anwendungszweck. $Aufgabe 3.8$
+\end{enumerate}
+\end{document}
