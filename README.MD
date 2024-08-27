@@ -1,6 +1,6 @@
 # What is this repository?
 This is a german 6-part university lecture called 'Generative KI'. This repository contains the slides for lectures 1 through 4 and 6. 
-Lecture 5 has been contributed and can be found here: [wefwefwef](https://github.com/AI-for-Business/Vorlesung-Generative-KI-Einheit-5).
+Lecture 5 has been contributed and can be found here: [Generative KI - Lecture 5](https://github.com/AI-for-Business/Vorlesung-Generative-KI-Einheit-5).
 The second half of the semester has been guest lectures. This repository also contains exercises, solutions, and an exam.
 
 
