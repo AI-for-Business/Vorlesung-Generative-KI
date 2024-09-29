@@ -1,0 +1,1 @@
+Lecture 5 has been contributed and can be found here: [Generative KI - Lecture 5](https://github.com/AI-for-Business/Vorlesung-Generative-KI-Einheit-5).
