@@ -1,0 +1,46 @@
+\fbox{\parbox[c]{\textwidth}{
+% \Large
+% \vspace{0.5cm}
+% $\sigma_1$ =
+% \begin{tabular}{cccccc}
+% a & c & b & d & f\\ \midrule
+% a & c & b & d & f
+% \end{tabular}
+% 
+% \vspace{0.75cm}
+% 
+% $\sigma_2$ =
+% \begin{tabular}{cccccc}
+% $\gg$ & b & c & d & $\gg$ \\ \midrule
+% a & b & c & d & f
+% \end{tabular}
+% \hspace{1.7cm}
+% $\sigma_2$ =
+% \begin{tabular}{cccccc}
+% $\gg$ & b & c & d & $\gg$ \\ \midrule
+% a & b & c & d & e
+% \end{tabular}
+% 
+% \vspace{0.75cm}
+% 
+% $\sigma_3$ =
+% \begin{tabular}{ccccccc}
+% $\gg$ & $\gg$ & $\gg$ &  d & e & a & \\ \midrule
+% a &  b & c & d & e & $\gg$
+% \end{tabular}
+% \hspace{0cm}
+% $\sigma_3$ =
+% \begin{tabular}{ccccccc}
+% $\gg$ & $\gg$ & $\gg$ &  d & e & a & \\ \midrule
+% a &  c & b & d & e & $\gg$
+% \end{tabular}
+
+%%%% Punktetabelle
+\normalsize
+\begin{tabular}{cp{13cm}}
+Punkte &\\
+1 .5 & für jedes $\sigma_x$ Allignement\\
+
+
+\end{tabular}
+}}
